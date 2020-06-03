@@ -1,6 +1,6 @@
-import pygame
-import random
-import os
+# Program inwazja biedronek mający na celu zaznajomienie z modułem pygame
+
+import pygame, random, os
 
 pygame.init()
 szer_okna = 600

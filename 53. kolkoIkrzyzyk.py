@@ -3,7 +3,6 @@
 from turtle import *
 import math
 
-
 #definiujemy bok kwadratu
 bok = 80
 
@@ -62,9 +61,11 @@ def kolko(a, b):
     for i in range(36):
         fd(3)
         left(10)
-    
+        
+# uruchomienie rysowania planszy
 plansza()
 
+# wywołanie sekwecji ruchu
 kolko(1, 1)
 krzyzyk(0, 2)
 kolko(1, 2)
