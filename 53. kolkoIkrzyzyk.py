@@ -1,3 +1,5 @@
+# Program wykorzystjący moduł turtle do tworzenia popularnej gry kółko i krzyżyk
+
 from turtle import *
 import math
 

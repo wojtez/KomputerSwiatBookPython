@@ -1,4 +1,5 @@
 # Gra losowa mająca za zadanie poprawny wybór jednego z przycików losowo wybieranego przez komputer
+# Program wykorzystuje popularny model tkinter
 
 from tkinter import *
 import random 

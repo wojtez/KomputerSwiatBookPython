@@ -1,7 +1,7 @@
-import pygame
-import os
-import random
-import math
+# Gra helikopter mająca za zadanie unianie zdeżenia ze ścianami jaskini
+# oraz liczenie pónktów 
+
+import pygame , os, random, math
 
 # inicjalizacja pakietu
 pygame.init()
