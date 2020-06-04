@@ -51,19 +51,19 @@ class Biedronka():
 przeciwnicy = []
 for i in range(10):
     przeciwnicy.append(Biedronka())
-    
+
+
+
+#tworzymy system punktowy
+punkty = 0
 #zmienna globalna
 gramy = True
-
 #wstawiamy wspolrzedne poczatkowe gracza oraz predkosc poruszania
 x_gracz = 300
 y_gracz = 300
 v = 20
-
 #tworzymy gracza
 gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)
-
-
 #pętla główna gry
 while True:
     #sprawdzanie przy każym evencie programu
@@ -81,7 +81,7 @@ while True:
                 if y_gracz + v < wys_okna - 20:
                     y_gracz = y_gracz + v    
             if event.type == pygame.K_RIGHT:
-                if x_gracz + v < szer_okna + 20:
+                if x_gracz + v < szer_okna - 20:
                     x_gracz = x_gracz + v    
             if event.type == pygame.K_LEFT:
                 if x_gracz - v > 0:
@@ -89,21 +89,22 @@ while True:
             #twrzenie gracza ponownie z nowymi współrzędnymi
             gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)    
     
-    
     #wprowadzamy biedronki w ruch    
     if gramy == True:
+        punkty = punkty + 1
         screen.fill((50, 50, 100))
         #kazda z listy 10ciu biedronek wprowadzamy w ruch
         for biedroneczka in przeciwnicy:
             biedroneczka.ruch()
             biedroneczka.rysuj()
+            biedroneczka.kolizja(gracz)
+        #wstawiamy informacje o punktach
+        czcionka = pygame.font.SysFont("Georgia", 20)
+        napis = czcionka.render(str(punkty), 1, (123, 213, 231))
+        screen.blit(napis, (30, 30))
         #wstawamy reprezentacje gracza
         pygame.draw.rect(screen, (0, 30, 0), gracz, 0)
         #uaktualniamy obraz
         pygame.display.update()
         #zwalniamy ruch biedronek
         pygame.time.wait(10)
-
-      
-        
-
