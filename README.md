@@ -1,3 +1,9 @@
-### KomputerSwiatBookPython
+Easy start with Python.
+==============
 
-That is my first Git poject, consisting all training files I write based on Komputer Swiat Pocket Book with Python Course.
+This is a repository that will have all training files from Komputer Swiat Book.
+
+What it have?
+=================
+
+Based on Python simple, programs / games shows how to use basic in Python.
