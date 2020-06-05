@@ -29,11 +29,11 @@ class Biedronka():
         # odbijamy obiekt od ścian programu
         if self.x <= 0 or self.x >= szer_okna - self.wielkosc:
             self.vx = self.vx * -1
-        if self.vy <= 0 or self.y >= szer_okna - self.wielkosc:
+        if self.y <= 0 or self.y >= szer_okna - self.wielkosc:
             self.vy = self.vy * -1
             
     def kolizja(self, player):
-        # zdezenie biedronki z naszym obiektem
+        #zdezenie biedronki z naszym obiektem
         #wyznaczenie srodka biedronki
         x_srodek = self.x + self.wielkosc/2
         y_srodek = self.y + self.wielkosc/2
@@ -47,7 +47,7 @@ class Biedronka():
             global gramy
             gramy = False
             
-# tworzymy biedronki 1 zaleznosci od ilosci tutaj 10
+# tworzymy biedronki w zaleznosci od ilosci tutaj 10
 przeciwnicy = []
 for i in range(10):
     przeciwnicy.append(Biedronka())
@@ -63,7 +63,8 @@ x_gracz = 300
 y_gracz = 300
 v = 20
 #tworzymy gracza
-gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)
+gracz = pygame.rect(x_gracz, y_gracz, 20, 20)
+
 #pętla główna gry
 while True:
     #sprawdzanie przy każym evencie programu
@@ -87,7 +88,7 @@ while True:
                 if x_gracz - v > 0:
                     x_gracz = y_gracz - v
             #twrzenie gracza ponownie z nowymi współrzędnymi
-            gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)    
+            gracz = pygame.rect(x_gracz, y_gracz, 20, 20)    
     
     #wprowadzamy biedronki w ruch    
     if gramy == True:
