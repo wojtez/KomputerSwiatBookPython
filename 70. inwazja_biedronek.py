@@ -1,6 +1,7 @@
 # Program inwazja biedronek mający na celu zaznajomienie z modułem pygame
-
 import pygame, random, os
+
+#TODO - wprawić w ruch obiekt gracza
 
 pygame.init()
 szer_okna = 600
@@ -63,7 +64,7 @@ x_gracz = 300
 y_gracz = 300
 v = 20
 #tworzymy gracza
-gracz = pygame.rect(x_gracz, y_gracz, 20, 20)
+gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)
 
 #pętla główna gry
 while True:
@@ -88,7 +89,8 @@ while True:
                 if x_gracz - v > 0:
                     x_gracz = y_gracz - v
             #twrzenie gracza ponownie z nowymi współrzędnymi
-            gracz = pygame.rect(x_gracz, y_gracz, 20, 20)    
+            gracz = pygame.Rect(x_gracz, y_gracz, 20, 20)
+               
     
     #wprowadzamy biedronki w ruch    
     if gramy == True:
