@@ -5,6 +5,8 @@ import math
 
 # definiujemy bok kwadratu
 bok = 80
+pole = [[False, False, False], [False, False, False], [False, False, False]]
+
 
 # rysowanie pola do gry za pomocą kwadratu
 def kwadrat():
@@ -68,34 +70,32 @@ czyj_ruch = "x"
 # sprawdzanie czyj ruch jest nastepny
 def postaw(a, b):
     global czyj_ruch
-    if czyj_ruch == "x":
-        krzyzyk(a, b)
-        czyj_ruch = "0"
-    elif czyj_ruch == "0":
-        kolko(a, b)
-        czyj_ruch = "x"
+    global pole
+    #dodanie tablicy pozwala zablokowac wstawianie x lub o w to samo miejsce
+    if pole [a] [b] == False:
+        pole [a] [b] = True
+        if czyj_ruch == "x":
+            krzyzyk(a, b)
+            czyj_ruch = "0"
+        elif czyj_ruch == "0":
+            kolko(a, b)
+            czyj_ruch = "x"
 
 # uruchomienie rysowania planszy
 plansza()
-postaw(0, 2)
-postaw(1, 1)
-postaw(2, 1)
 postaw(1, 2)
 postaw(0, 1)
-postaw(2, 0)
+postaw(1, 2)
+postaw(1, 2)
+postaw(1, 2)
+postaw(1, 2)
+postaw(1, 2)
+postaw(1, 2)
+postaw(1, 2)
+postaw(0, 2)
+postaw(1, 0)
+postaw(2, 2)
 
 
-'''
-# wywołanie sekwecji ruchu
-kolko(1, 1)
-krzyzyk(0, 2)
-kolko(1, 2)
-krzyzyk(1, 0)
-kolko(2, 1)
-krzyzyk(0, 1)
-kolko(0, 0)
-krzyzyk(2, 2)
-kolko(2, 0)
-'''
 
 input("Push enter button to finnish game.")
