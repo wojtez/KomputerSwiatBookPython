@@ -7,16 +7,12 @@ import math
 bok = 80
 
 # rysowanie pola do gry za pomocą kwadratu
-
-
 def kwadrat():
     for i in range(4):
         fd(bok)
         left(90)
 
 # rysowanie pól do gry w tabeli 3x3
-
-
 def plansza():
     # rysowanie kwadratow w wierszach
     for i in range(3):
@@ -36,8 +32,6 @@ def plansza():
         right(90)
 
 # tworzenie krzyżyka
-
-
 def krzyzyk(a, b):  # a = kolumna, b = wiersz
     pu()
     # przesmieszczanie żółwia
@@ -53,8 +47,6 @@ def krzyzyk(a, b):  # a = kolumna, b = wiersz
     pu()
 
 # tworzenie kolka
-
-
 def kolko(a, b):
     pu()
     setx(a * bok + bok/2)
@@ -72,9 +64,8 @@ def kolko(a, b):
 
 
 czyj_ruch = "x"
+
 # sprawdzanie czyj ruch jest nastepny
-
-
 def postaw(a, b):
     global czyj_ruch
     if czyj_ruch == "x":
@@ -82,10 +73,7 @@ def postaw(a, b):
         czyj_ruch = "0"
     elif czyj_ruch == "0":
         kolko(a, b)
-        czyj_ruch == "x"
-
-  # TODO - checke why do not change from 0 to X
-
+        czyj_ruch = "x"
 
 # uruchomienie rysowania planszy
 plansza()
