@@ -1,9 +1,6 @@
 Easy start with Python.
 ==============
 
-This is a repository that will have all training files from Komputer Swiat Book.
+To repozytorium zawiera wszystkie programy / gry zawarte w książce Komputer Świata do nauki języka Python na przykładach.
 
-What it have?
-=================
-
-Based on Python simple, programs / games shows how to use basic in Python.
+Pliki są przepisane na podstawie książki i dodane są do nich moje komentarze, które pomagają w zrozumieniu kolejnych kroków, podczas pisanaia dadengo programu. 
